@@ -5,7 +5,7 @@
 Data Analytics
 ---------------------
 
-Goal to analyse CHOP Biorepository data with R and Python where needed create a web based dashboard on biorepository specimen data in D3.js.
+Goal to analyze CHOP Biorepository data with R and Python where needed create a web based dashboard on biorepository specimen data in D3.js.
 
 
 ## D3.js
