@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--This is my inital tutorial to step me through components of D3 to get to the term project goal-->
+<!--http://alignedleft.com/tutorials/d3/using-your-data-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.min.js"></script>
+        <style>
+        div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+    margin-right: 2px;
+}
+</style>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+/*random data set*/
+        var dataset = [];                        //Initialize empty array
+        for (var i = 0; i < 25; i++) {           //Loop 25 times
+            var newNumber = Math.random() * 30;  //New random number (0-30)
+            dataset.push(newNumber);             //Add new number to array
+        }
+
+        /*var dataset = [ 5, 10, 15, 20, 25 ];*/
+
+        d3.select("body").selectAll("p")
+            .data(dataset)
+            .enter()
+            .append("p")
+            .text(function(d) {
+    					return "I can count up to " + d;
+    				})
+    				.style("color", "red");
+/*
+            d3.select("body").selectAll("div")
+                .data(dataset)
+                .enter()
+                .append("div")
+                .attr("class", "bar");
+*/
+                d3.select("body").selectAll("div")
+          				.data(dataset)
+          				.enter()
+          				.append("div")
+          				.attr("class", "bar")
+
+          				.style("height", function(d)
+                  {
+                  var barHeight = d * 5;
+          					return barHeight + "px";
+          				});
+
+
+
+        </script>
+    </body>
+</html>
