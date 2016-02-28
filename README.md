@@ -1,5 +1,6 @@
- Term Project INFO 780
- ====================
+
+3 Term Project INFO 780
+
 
 Data Analytics
 ---------------------
